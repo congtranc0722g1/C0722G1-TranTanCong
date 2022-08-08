@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // tính điểm trung bình
+    inputLy = prompt("Điểm lý");
+    inputHoa = prompt("Điểm hóa");
+    inputSinh = prompt("Điểm sinh");
+    let ly = parseFloat(inputLy);
+    let hoa = parseFloat(inputHoa);
+    let sinh = parseFloat(inputSinh);
+    tb = (ly + hoa + sinh)/3
+    document.write("Điểm trung bình là:" + tb);
+
+    // chuyển đổi độ C sang độ F
+    inputC = prompt("nhập độ C");
+    let c = parseInt(inputC);
+    dof= (9*c/5+32);
+    document.write("độ F là: " + dof);
+
+    // tính diện tích và chu vi hình tròn
+    inputR = prompt("Nhập bán kính");
+    let r = parseInt(inputR);
+    const pi= 3.14;
+    dt = r*r*pi
+    cv = 2*r*pi
+    document.write("Diện tích là: " + dt);
+    document.write("Chu vi là: " + cv);
+
+</script>
+
+
+</body>
+</html>

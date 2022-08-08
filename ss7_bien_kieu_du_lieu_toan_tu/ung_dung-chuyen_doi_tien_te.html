@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+   <tr>
+       <th><b>Amount</b></th>
+       <th><b>From Currency</b></th>
+       <th><b>To Currency</b></th>
+   </tr>
+    <tr>
+        <td> <input type="number" id="money"> </td>
+        <td>
+            <select id="from">
+                <option value="vnd">VietNam</option>
+                <option value="usd">Dola</option>
+            </select>
+        </td>
+        <td>
+            <select id="to">
+                <option value="vnd">VietNam</option>
+                <option value="usd">Dola</option>
+            </select>
+        </td>
+        <td> <button onclick="tinh()"; style="background-color: blue; color: white"> Convert</button></td>
+    </tr>
+</table>
+<p id="1"></p>
+<script>
+    function tinh() {
+        let tien = document.getElementById("money").value;
+        let from = document.getElementById("from").value;
+        let Result;
+        let to = document.getElementById("to").value;
+        if (from =="usd"&& to == "vnd"){
+            Result = tien * 24000
+           document.getElementById("1").innerHTML="Result:"+ Result;
+
+
+            }
+        else if (from == "vnd" && to == "usd") {
+            Result = tien / 24000
+            document.getElementById("1").innerHTML="Result:"+ Result;
+
+
+        }
+        else
+            Result = tien
+        document.getElementById("1").innerHTML="Result:"+ Result;
+
+    }
+    
+
+</script>
+</body>
+</html>

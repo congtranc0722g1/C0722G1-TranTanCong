@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="2"> <input type="text" id="in1"></td>
+        <td colspan="2"> <input type="text" id="in2"></td>
+    </tr>
+    <tr>
+        <td> <button onclick="cong()">Addition(+)</button> </td>
+        <td> <button onclick="tru()">Subtraction(-)</button> </td>
+        <td> <button onclick="nhan()">Multiplication(x)</button> </td>
+        <td> <button onclick="chia()">Division(/)</button> </td>
+    </tr>
+</table>
+</body>
+<p id="1" </p>
+<script>
+    function cong() {
+        a1 = parseFloat(document.getElementById("in1").value);
+        a2 = parseFloat(document.getElementById("in2").value);
+        cong1 = a1 + a2
+        document.getElementById("1").innerHTML="Kết quả là: " + cong1;
+
+
+    }
+    function tru() {
+        a1 = parseFloat(document.getElementById("in1").value);
+        a2 = parseFloat(document.getElementById("in2").value);
+        cong1 = a1 - a2
+        document.getElementById("1").innerHTML="Kết quả là: " + cong1;
+
+    }
+    function nhan() {
+        a1 = parseFloat(document.getElementById("in1").value);
+        a2 = parseFloat(document.getElementById("in2").value);
+        cong1 = a1 * a2
+        document.getElementById("1").innerHTML="Kết quả là: " + cong1;
+
+    }
+    function chia() {
+        a1 = parseFloat(document.getElementById("in1").value);
+        a2 = parseFloat(document.getElementById("in2").value);
+        cong1 = a1 / a2
+        document.getElementById("1").innerHTML="Kết quả là: " + cong1;
+
+    }
+</script>
+</body>
+</html>
