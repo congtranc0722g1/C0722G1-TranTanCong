@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh chi so can nag co the</title>
+</head>
+<body>
+<h1>Tính chỉ số cân nặng của cơ thể</h1>
+<table>
+    <tr>
+        <th>Nhập cân nặng: (kg)</th>
+        <td> <input type="text" id="nang"> </td>
+
+    </tr>
+    <tr>
+        <th>Nhập chiều cao: (m)</th>
+        <td> <input type="text" id="cao"> </td>
+    </tr>
+
+</table>
+<button onclick="check()">kiểm tra</button>
+<p id="xuat"></p>
+<script>
+    function check() {
+        let weight = document.getElementById("nang").value;
+        let height = document.getElementById("cao").value;
+        bmi = weight / ( height ^ 2 )
+        if(bmi < 18.5){
+            ketqua = "thiếu cân"
+        }else if(bmi >= 18.5 && bmi < 25.0){
+            ketqua = " bình thường"
+
+        }else  if(bmi >= 25 && bmi < 30.0 ){
+            ketqua = "thừa cân"
+
+        }else
+            ketqua = "béo phì"
+        document.getElementById("xuat").innerHTML = "Chỉ số BMI là: " + bmi + ". Bạn " + ketqua;
+
+    }
+</script>
+
+</body>
+</html>
