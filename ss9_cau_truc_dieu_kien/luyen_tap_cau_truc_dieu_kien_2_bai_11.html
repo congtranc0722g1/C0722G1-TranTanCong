@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // lương dưới 10 triệu, thuế thu nhập cá nhân là 3%
+    // lương từ 10 triệu đến 20 triệu, thuế thu nhập cá nhân là 5%
+    // lương trên 20 triệu, thuế thu nhập cá nhân là 7%
+    let tienLuong = parseInt(prompt("Nhập tiền lương của bạn (vnd)"));
+    let tienThue;
+    if(tienLuong < 10000000){
+        tienThue = (tienLuong * 3) / 100;
+
+    }else if(tienLuong >= 10000000 && tienLuong <= 20000000){
+        tienThue = (tienLuong * 5) / 100;
+
+    }else {
+        tienThue = (tienLuong * 7) /100;
+    }
+    alert("Tiền lương của bạn: " + tienLuong + " vnd .Bạn phải đóng " + tienThue + " vnd tiền thuế thu nhập");
+</script>
+</body>
+</html>

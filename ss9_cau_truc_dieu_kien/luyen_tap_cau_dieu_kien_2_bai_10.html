@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 50 kWh đầu tiên đơn giá 1250 vnd/kWh
+    // Từ trên 50 kWh đến 100 kWh đơn giá 1500 vnd/kWh
+    // Trên 100 kWh đơn giá 2000 vnd/kWh
+    let soDien = parseInt(prompt("Nhập số điện (kWh)"));
+    let tienDien;
+    if(soDien <= 50){
+        tienDien = soDien * 1250;
+
+    }else if(soDien <= 100){
+        tienDien = soDien * 1500;
+    }else {
+        tienDien = soDien * 2000;
+
+    }
+    alert(" Bạn đã sử dụng: " + soDien + " kWh. Số tiền cần thanh toán: " + tienDien + " vnd" );
+</script>
+</body>
+</html>

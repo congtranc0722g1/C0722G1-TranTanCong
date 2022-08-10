@@ -5,6 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    // gọi điện 1200đ/phút
+    // tin nhắn 200đ/tin
+    let soPhut = parseInt(prompt("Nhập số phút gọi"));
+    let soSms = parseInt(prompt("Nhập số tin nhắn"));
+    let tienGoi = soPhut * 1200;
+    let tienTinhan = soSms * 200;
+    let thanhToan = tienGoi + tienTinhan;
+    alert("Số tiền cần thanh toán: " + thanhToan + " vnđ")
+</script>
 </body>
 </html>
