@@ -6,10 +6,11 @@
 </head>
 <body>
 <script>
-    let soTien = parseInt(prompt(" Số tiền"));
-    let soThang = parseInt(prompt("Số tháng"));
-    let laiSuat = parseInt(prompt("Phần trăm lãi xuất (%/tháng)"));
-    
+    let soTien = parseFloat(prompt(" Số tiền"));
+    let soThang = parseFloat(prompt("Số tháng"));
+    let laiSuat = parseFloat(prompt("Phần trăm lãi xuất (%/tháng)"));
+    let tienLai = soTien * laiSuat * soThang;
+    alert("Tiền lãi: " + tienLai);
 </script>
 </body>
 </html>
