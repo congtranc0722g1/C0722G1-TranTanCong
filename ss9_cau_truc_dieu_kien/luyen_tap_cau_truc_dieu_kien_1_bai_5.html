@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let baiKiemtra1 = parseInt(prompt("Nhập điểm bài kiểm tra 1"));
+    let baiKiemtra2 = parseInt(prompt("Nhập điểm bài kiểm tra 2"));
+    let baiKiemtra3 = parseInt(prompt("Nhập điểm bài kiểm tra 3"));
+    let baiKiemtragiuaky = parseInt(prompt("Nhập điểm bài kiểm tra giữa kỳ"));
+    let baiKiemtracuoiky = parseInt(prompt("Nhập điểm bài kiểm tra cuối kỳ"));
+    let diemTrungbinh = (baiKiemtra1 + baiKiemtra2 + baiKiemtra3 + (baiKiemtragiuaky * 2) + (baiKiemtracuoiky *3)) / 8
+    if (diemTrungbinh >= 8){
+        document.write("Điểm trung bình của bạn là: " + diemTrungbinh + " . Học sinh giỏi");
+
+    }else  if(diemTrungbinh >= 6.5){
+        document.write("Điểm trung bình của bạn là: " + diemTrungbinh + " . Học sinh khá");
+
+    }else if(diemTrungbinh > 3.5){
+        document.write("Điểm trung bình của bạn là: " + diemTrungbinh + " . Học sinh trung bình");
+
+
+    }else{
+        document.write("Điểm trung bình của bạn là " + diemTrungbinh + " . Học sinh yếu");
+    }
+</script>
+</body>
+</html>
