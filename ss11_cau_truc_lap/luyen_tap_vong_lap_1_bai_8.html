@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1><b>GAME ĐOÁN SỐ</b></h1>
+<button onclick="doanSo()">chơi</button>
+<script>
+    function doanSo() {
+        let nhapSo = Number(prompt("Nhập vào muốn đoán trong khoảng nào?"));
+        let ngauNhien = Math.floor(Math.random() * nhapSo);
+        let choiGame = Number(prompt("Nhập số mà bạn đoán"));
+        let count = 0;
+        while (choiGame !== NhapSo) {
+            count++;
+            if (count == 4) {
+                alert("Bạn đã hết số lượt đoán");
+                break;
+            } else if (choiGame < ngauNhien) {
+                alert("Bạn đã nhập nhỏ hơn");
+            } else {
+                alert("Bạn đã nhập lớn hơn");
+            }
+            choiGame = prompt("Nhập số mà bạn đoán");
+        }
+        if(count == 4){
+            alert("Bạn đã hết số lượt đoán");
+        }else {
+            alert("Chúc mừng bạn đã chiến thắng");
+        }
+
+    }
+</script>
+</body>
+</html>

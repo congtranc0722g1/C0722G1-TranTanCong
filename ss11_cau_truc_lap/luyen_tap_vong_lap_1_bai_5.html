@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let so1 = parseInt(prompt(" Nhập số thứ nhất"));
+    let so2 = parseInt(prompt("Nhập số thứ hai"));
+    let i;
+    for(i =1; i <= 20; i++){
+        document.write(so1 + "<br>")
+        const temp = so1;
+        so1 = so2;
+        so2 = temp + so2;
+    }
+</script>
+</body>
+</html>

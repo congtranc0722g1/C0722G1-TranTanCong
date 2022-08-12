@@ -24,20 +24,20 @@
     function check() {
         let weight = document.getElementById("nang").value;
         let height = document.getElementById("cao").value;
-        let ketqua;
+        let ketQua;
         bmi = weight / ( height ^ 2 )
         if(bmi < 18.5){
-            ketqua = "thiếu cân"
+            ketQua = "thiếu cân"
         }else if(bmi >= 18.5 && bmi < 25.0){
-            ketqua = " bình thường"
+            ketQua = " bình thường"
 
         }else  if(bmi >= 25 && bmi < 30.0 ){
-            ketqua = "thừa cân"
+            ketQua = "thừa cân"
 
         }else
-            { ketqua = "béo phì"}
+            { ketQua = "béo phì"}
 
-        document.getElementById("xuat").innerHTML = "Chỉ số BMI là: " + bmi + ". Bạn " + ketqua;
+        document.getElementById("xuat").innerHTML = "Chỉ số BMI là: " + bmi + ". Bạn " + ketQua;
 
 
 

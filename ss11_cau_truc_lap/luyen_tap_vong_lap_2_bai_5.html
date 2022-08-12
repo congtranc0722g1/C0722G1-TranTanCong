@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soTien = Number(prompt("Nhập số tiền"));
+    let soThang = Number(prompt("Nhập số tháng gửi"));
+    let laiSuat = Number(prompt("Lãi suất hàng tháng"));
+    let tienLai = 0;
+    for(let i = 0; i < soThang; i++){
+        tienLai = soTien * laiSuat/100;
+        soTien = soTien + tienLai;
+    }
+    alert("Tổng tiền thu được: " + soTien);
+</script>
+</body>
+</html>
