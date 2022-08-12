@@ -6,8 +6,12 @@
 </head>
 <body>
 <script>
-    let a = 2;
-
+    let nhapSo = Number(prompt("Nhập số cần tính giai thừa:"));
+    let giaiThua = 1;
+    for (let i = 1; i <= nhapSo; i++){
+        giaiThua = giaiThua * i;
+    }
+    alert("Kết quả là: " + giaiThua);
 </script>
 </body>
 </html>
