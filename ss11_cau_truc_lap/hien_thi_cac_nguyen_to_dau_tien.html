@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let N =2;
+    let soLuong =0;
+     while (soLuong < 20) {
+
+         let count = 0;
+         for (let i = 1; i <= N; i++) {
+             if (N % i == 0) {
+                 count++;
+             }
+         }
+         if (count == 2) {
+             document.write(N + "<br>")
+             soLuong++;
+         }
+         N++;
+     }
+</script>
+</body>
+</html>
