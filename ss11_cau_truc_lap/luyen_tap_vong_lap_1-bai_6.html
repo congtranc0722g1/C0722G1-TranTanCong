@@ -6,16 +6,18 @@
 </head>
 <body>
 <script>
-    let i;
-    let tong = 0;
+    let i = 0;
     let count = 1;
-    for (i = 0; count < 31; i++){
-        if (i%7 === 0){
-            tong += i
-            count++
-        }
+    let tongSo = 0;
+    while(count < 31){
+        if(i % 7 === 0){
+            document.write(i+ "<br>");
+            tongSo += i;
+            count++;
+
+        }i++;
     }
-    document.write("Tổng của 30 số tự nhiên đầu tiên là: "+tong);
+    document.write("Tổng là: "+ tongSo);
 </script>
 </body>
 </html>
