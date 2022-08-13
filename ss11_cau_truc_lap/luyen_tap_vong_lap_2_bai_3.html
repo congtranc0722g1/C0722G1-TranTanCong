@@ -8,7 +8,7 @@
 <button onclick="tamGiackieu1()">Kiểu 1</button>
 <button onclick="tamGiackieu2()">Kiểu 2</button>
 <button onclick="tamGiackieu3()">Kiểu 3</button>
-<button onclick="tamGiackieu4()">Kiểu 1</button>
+<button onclick="tamGiackieu4()">Kiểu 4</button>
 <p id="view1"> </p>
 <p id="view2"> </p>
 <p id="view3"> </p>
@@ -60,7 +60,18 @@
         let canhTamgiac = Number(prompt("Nhập vào giá trị tam giác"));
         let hinhTamgiac="";
         for (let i = 1; i <= canhTamgiac; i++){
-            for (let j = 1; j <= canhTamgiac; j++)
+            for (let j = 1; j <= canhTamgiac; j++){
+                if(j < i){
+                    hinhTamgiac += "&nbsp&nbsp";
+
+                }else {
+                    hinhTamgiac += "*"
+                }
+            }
+            hinhTamgiac += "<br>";
+
+        }
+        document.getElementById("view4").innerHTML= hinhTamgiac
 
     }
 </script>
