@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="tamGiackieu1()">Kiểu 1</button>
+<button onclick="tamGiackieu2()">Kiểu 2</button>
+<button onclick="tamGiackieu3()">Kiểu 3</button>
+<button onclick="tamGiackieu4()">Kiểu 1</button>
+<p id="view1"> </p>
+<p id="view2"> </p>
+<p id="view3"> </p>
+<p id="view4"> </p>
+<script>
+    function tamGiackieu1(){
+        let canhTamgiac = Number(prompt("Nhập vào giá trị tam giác"));
+        let hinhTamgiac="";
+        for (let i = 1; i <= canhTamgiac; i++){
+            for (let j = 1; j <= i; j++) {
+                hinhTamgiac += "*"
+            }
+            hinhTamgiac += "<br>";
+        }
+        document.getElementById("view1").innerHTML= hinhTamgiac
+
+
+
+    }
+    function tamGiackieu2() {
+        let canhTamgiac = Number(prompt("Nhập vào giá trị tam giác"));
+        let hinhTamgiac="";
+        for (let i = 1; i <= canhTamgiac; i++){
+            for (let j = canhTamgiac; j >= i; j--) {
+                hinhTamgiac += "*"
+            }
+            hinhTamgiac += "<br>";
+        }
+        document.getElementById("view2").innerHTML= hinhTamgiac
+    }
+    function tamGiackieu3() {
+        let canhTamgiac = Number(prompt("Nhập vào giá trị tam giác"));
+        let hinhTamgiac="";
+        for (let i = 1; i <= canhTamgiac; i++){
+            for (let j = 1; j <= canhTamgiac; j++) {
+                if(j <= (canhTamgiac-i)){
+                    hinhTamgiac += "&nbsp&nbsp"
+
+                }else {
+                    hinhTamgiac += "*"
+                }
+            }
+            hinhTamgiac += "<br>";
+        }
+        document.getElementById("view3").innerHTML= hinhTamgiac
+
+    }
+    function tamGiackieu4() {
+        let canhTamgiac = Number(prompt("Nhập vào giá trị tam giác"));
+        let hinhTamgiac="";
+        for (let i = 1; i <= canhTamgiac; i++){
+            for (let j = 1; j <= canhTamgiac; j++)
+
+    }
+</script>
+</body>
+</html>
