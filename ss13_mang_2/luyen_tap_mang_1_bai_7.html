@@ -15,7 +15,8 @@
     let soCheck =+prompt("Nhập số kiểm tra");
     for (let i = 0; i< phanTu.length; i++){
         if (soCheck == phanTu[i]){
-            phanTu.splice(i,1).push(0)
+            phanTu.splice(i,1);
+            phanTu.push(0);
         }
     }
     alert(phanTu);
