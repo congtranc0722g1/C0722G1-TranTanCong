@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soPhantu =+prompt("Nhập Số phần tử");
+    let phanTu = new Array(soPhantu);
+    let trungBinh = 0;
+    let tongSo = 0;
+    for (let i = 0; i< phanTu.length; i++){
+        phanTu[i]=+prompt("Nhập phân tử thứ:" + i );
+    }
+    let solonnhat = phanTu[0];
+    for (let i = 1; i < phanTu.length; i++){
+        if (solonnhat <= phanTu[i]){
+            solonnhat = phanTu[i];
+        }
+
+    }
+    alert(" Số lớn nhất là: " + solonnhat);
+    for (let i = 0; i< phanTu.length; i++){
+        tongSo += phanTu[i];
+        trungBinh = tongSo / soPhantu;
+    }
+    alert("trung bình là: " + trungBinh);
+</script>
+</body>
+</html>

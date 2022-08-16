@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập từ:</label>
+<input type="text" id = "nhapVao">
+<button onclick="dichEngtovie()">Dịch</button>
+<p id = "view"></p>
+<script>
+    function dichEngtovie() {
+        let english = ["zebra", "lioness", "lion", "lyena", "gnu", "baboon", "rhinoceros", "gazelle", "cheetah", "elephant"];
+        let vietNam = ["Con ngựa vằn", "Sư tử (cái)", "Sư tử (đực)", "Con linh cẩu", "Linh dương đầu bò", "Khỉ đầu chó", "Con tê giác", "Linh dương Gazen", "Báo Gêpa", "Voi"];
+        let index_english = 0;
+        let ketQua = "";
+        string = document.getElementById("nhapVao").value;
+        for(let i = 0; i < english.length; i++){
+            if(string === english[i]){
+                index_english = i;
+                for (let j = 0; j < vietNam.length; j++){
+                    if (index_english === j){
+                        ketQua =  vietNam[j];
+                    }
+                }
+
+            }
+
+        }
+        document.getElementById("view").innerHTML = ketQua;
+    }
+</script>
+</body>
+</html>

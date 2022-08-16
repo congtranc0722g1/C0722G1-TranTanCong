@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soPhantu = 10;
+    let phanTu = new Array(soPhantu);
+    let count = 0;
+
+    for(let i = 0; i < phanTu.length; i++){
+        phanTu[i] =+prompt("Số thứ" + i);
+
+    }
+    let soLonnhat = phanTu[0]
+    for(let i = 1; i < phanTu.length; i++){
+        if (soLonnhat <= phanTu[i]){
+            soLonnhat = phanTu[i];
+
+
+        }else {
+            soLonnhat = soLonnhat;
+        }
+
+    }
+    document.write("Số lớn nhất là: " + soLonnhat )
+
+</script>
+</body>
+</html>

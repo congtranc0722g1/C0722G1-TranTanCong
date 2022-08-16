@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // nhập từ bàn phím 1 mảng gồm n phần tử=> in ra
+    // tính tổng các phần tử ở vị trí lẻ trong mảng
+    let n = +prompt("Nhập số luong phần tử");
+    let arr= new Array(n);
+    let tongSo = 0;
+    for(let i=0; i < arr.length; i++){
+        arr[i]=+prompt("nhap pt thu "+ i);
+    }
+    alert(arr);
+    for (let i = 0; i <arr.length ; i++) {
+        if(i%2 !== 0){
+            tongSo += arr[i];
+
+        }
+    }alert(tongSo);
+</script>
+</body>
+</html>

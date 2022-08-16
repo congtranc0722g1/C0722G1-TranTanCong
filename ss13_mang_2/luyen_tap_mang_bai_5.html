@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soPhantu =+prompt("Nhập Số phần tử");
+    let phanTu = new Array(soPhantu);
+    let count = 0;
+    for (let i = 0; i< phanTu.length; i++) {
+        phanTu[i] = +prompt("Nhập phân tử thứ:" + i);
+    }
+    for (let i = 0; i< phanTu.length; i++){
+        if(phanTu[i] < 0){
+            count++;
+        }
+    }
+    alert("Số lượng số nguyên âm: " + count);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soPhantu = 10;
+    let mangA = new Array(soPhantu);
+    for (let i = 0; i< mangA.length; i++) {
+        mangA[i] = +prompt("Nhập phân tử thứ:" + i);
+    }
+    let mangB = new Array(soPhantu);
+    for (let j = 0; j < mangB.length; j++) {
+        mangB[j] = +prompt("Nhập phân tử thứ:" + j);
+    }
+    let mangC = mangA.concat(mangB);
+    document.write(mangC)
+</script>
+</body>
+</html>
