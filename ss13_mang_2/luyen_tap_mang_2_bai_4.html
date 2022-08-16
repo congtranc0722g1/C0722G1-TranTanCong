@@ -8,14 +8,14 @@
 <script>
     let str = prompt("Nhập vào một chuỗi");
     let arr = [];
-    let index = 0;
+    let count = 0;
     arr = str.split(" ")
     for (let i = 0; i< arr.length; i++){
-        if(index != " "){
-            index++
+        if(arr[i] != " "){
+            count++
         }
     }
-    alert(index);
+    alert("Số từ: "+ count);
 </script>
 </body>
 </html>
