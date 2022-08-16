@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soPhantu = 10;
+    let phanTu = new Array(soPhantu);
+    let count =0;
+    for (let i = 0; i< phanTu.length; i++) {
+        phanTu[i] = +prompt("Nhập phân tử thứ:" + i);
+    }
+    let soCheck =+prompt("Nhập số kiểm tra");
+    for (let i = 0; i< phanTu.length; i++){
+        if (soCheck == phanTu[i]){
+            phanTu.splice(i,1).push(0)
+        }
+    }
+    alert(phanTu);
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhập vào một chuỗi thứ nhất");
+    let arr = [];
+    let count = 0;
+    arr = str.split("")
+    let str1 = prompt("Nhập vào một chuỗi nhập chuỗi thứ 2");
+    let arr1 = [];
+    arr1 = str1.split("");
+    for (let i = 0; i < arr.length; i++){
+        if(str[i] !== str1[i]){
+            count++;
+
+
+        }
+
+    }
+    if(count === 0){
+        alert("Hai chuỗi giống nhau");
+
+    }else {
+        alert("Hai chuỗi khác nhau");
+    }
+</script>
+</body>
+</html>
