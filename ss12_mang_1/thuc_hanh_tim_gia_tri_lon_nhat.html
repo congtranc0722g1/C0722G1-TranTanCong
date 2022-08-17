@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = [3, -2, 0, 10, 2, 9];
+    let max = numbers[0];
+    let index = 0;
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] > max) {
+            max = numbers[i];
+            index = i;
+        }
+    }
+    alert("Số lớn nhất: " + max + " tại vị trí: " + index);
+</script>
+</body>
+</html>
