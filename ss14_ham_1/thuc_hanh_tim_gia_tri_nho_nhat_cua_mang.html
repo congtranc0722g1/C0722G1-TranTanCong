@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function timSonho(arr) {
+        let soNhonhat = arr[0];
+        for(let i = 1; i < arr.length; i++){
+            if(arr[i] < soNhonhat){
+                soNhonhat = arr[i];
+            }
+        }
+        return soNhonhat;
+    }
+    let arr1 = [3, 2, 1, -7, -3, 6, 5];
+    let soNhonhat = timSonho(arr1);
+    alert(soNhonhat);
+</script>
+</body>
+</html>
