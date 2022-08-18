@@ -6,12 +6,26 @@
 </head>
 <body>
 <script>
-    function kiemTrangoisao(sao) {
-        ngoiSao =[Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe, Regulus];
-        chumSao = [UrsaMinor, Tarurus, Cygnus, Lyra, Aquila, UrsaMajor, Leo];
+    ngoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    chomSao = ["UrsaMinor", "Tarurus", "Cygnus", "Lyra", "Aquila", "UrsaMajor", "Leo"];
+    function kiemTrangoisao(saoNgoi) {
+        let index_sao;
+        for (let i = 0; i < ngoiSao.length; i++) {
+            if (saoNgoi == ngoiSao[i]) {
+            index_sao = i;
+            }
+        }
+        for (let j = 0; j < chomSao.length; j++) {
+            if (index_sao == j) {
+                return chomSao[j];
+            }
+        }
+        return "Không tìm thấy sao";
     }
-    let ngoiSao = prompt("Nhập vào ngôi sao cần kiểm tra")
-    kiemTrangoisao(ngoiSao)
+
+    let nhapSao = prompt("Nhập vào ngôi sao cần kiểm tra");
+    //kiemTrangoisao(nhapSao);
+    alert(kiemTrangoisao(nhapSao));
 </script>
 </body>
 </html>
