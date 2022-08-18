@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTrakytu (arr,kiemTra){
+        let count =0;
+        let check = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == kiemTra) {
+                count++
+                check = true;
+            }
+        }
+        if (check) {
+            return count;
+        }else {
+            return -1;
+        }
+    }
+    let soPhantu =+prompt("Nhập số phần tử")
+    let phanTu = new Array(soPhantu);
+    for (let i = 0; i< phanTu.length; i++) {
+        phanTu[i] = +prompt("Nhập phân tử thứ:" + i);
+    }
+    let kyTuKT = prompt("Nhập vào ký tự cần kiểm tra");
+    alert (kiemTrakytu(phanTu,kyTuKT));
+
+</script>
+</body>
+</html>
