@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const pi = 3.14;
+    function tinhDientichhinhtron(banKinh) {
+        let dienTich = Math.pow(banKinh, 2) * pi;
+        return dienTich;
+
+
+
+    }
+    function tinhChuvihinhtron(banKinh) {
+        let chuVi = 2 * banKinh * pi;
+        return chuVi;
+    }
+    let banKinh = +prompt("Nhập vào bán kính hình tròn");
+    document.write("Diện tích hình tròn là: " + tinhDientichhinhtron(banKinh));
+    document.write("<br>");
+    document.write("Chu vi hình tròn là: " + tinhChuvihinhtron(banKinh));
+</script>
+</body>
+</html>

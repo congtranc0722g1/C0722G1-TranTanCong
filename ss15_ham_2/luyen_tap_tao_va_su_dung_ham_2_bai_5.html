@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function timSonhonhat(soThunhat,soThuhai,soThuba) {
+        if(soThunhat < soThuhai && soThunhat < soThuba){
+            alert("Số nhỏ nhất là: " + soThunhat);
+        }else if(soThuhai < soThuba){
+            alert("Số bé nhất là: " + soThuhai);
+        }else {
+            alert("Số bé nhất là: " + soThuba);
+        }
+
+    }
+    let soThu1 = +prompt("Nhập số thứ nhất");
+    let soThu2 = +prompt("Nhập số thứ hai");
+    let soThu3 = +prompt("Nhập số thứ ba");
+    timSonhonhat(soThu1,soThu2,soThu3);
+</script>
+</body>
+</html>
