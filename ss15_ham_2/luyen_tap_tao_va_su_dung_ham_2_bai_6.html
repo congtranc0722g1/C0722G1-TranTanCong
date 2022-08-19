@@ -8,15 +8,15 @@
 <script>
     function kiemTrasonguyenduong(so) {
         if(so >= 0){
-            alert(true);
+            return true;
 
         }else {
-            alert(false);
+            return false;
         }
 
     }
     let soKT = parseInt(prompt("Nhập vào một số"));
-    kiemTrasonguyenduong(soKT);
+    alert(kiemTrasonguyenduong(soKT));
 </script>
 </body>
 </html>
