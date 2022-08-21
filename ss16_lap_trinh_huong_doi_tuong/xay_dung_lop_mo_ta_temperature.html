@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class ChuyenDoiNhietDo {
+        constructor(DoC) {
+            this.DoC = DoC;
+        }
+        TinhDoF(DoF){
+            DoF = 9/5 * this.DoC + 32;
+            return DoF;
+        }
+        TinhDoK(DoK){
+            DoK = this.DoC + 273.15;
+            return DoK;
+        }
+    }
+    let nhapNhietdo =+prompt("nhập vào nhiệt độ");
+    let DoC = new ChuyenDoiNhietDo(nhapNhietdo);
+    document.write(nhapNhietdo + "℃ = " + DoC.TinhDoF() + "℉");
+    document.write("<br>");
+    document.write(nhapNhietdo + "℃ = " + DoC.TinhDoK() + "K");
+</script>
+</body>
+</html>
