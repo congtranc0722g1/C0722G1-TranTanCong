@@ -6,9 +6,36 @@
 </head>
 <body>
 <script>
-    class Rectangle {
-
+    class HinhChuNhat {
+        constructor(chieuDai,chieuRong) {
+            this.chieuDai = chieuDai;
+            this.chieuRong = chieuRong;
+        }
+        layChieudai(){
+            return this.chieuDai;
+        }
+        layChieurong(){
+            return this.chieuRong;
+        }
+        tinhDientich(dienTich){
+            dienTich = this.chieuDai * this.chieuRong;
+            return dienTich;
+        }
+        tinhChuvi(chuVi){
+            chuVi = (this.chieuDai + this.chieuRong) * 2;
+            return chuVi;
+        }
     }
+    let chieuDai = +prompt("Nhập chiều dài");
+    let chieuRong = +prompt("Nhập chiều rộng");
+    let chuNhat1 = new HinhChuNhat(chieuDai,chieuRong);
+    document.write("Chiều dài: " + chuNhat1.layChieudai());
+    document.write("<br>");
+    document.write("Chiều rộng: " + chuNhat1.layChieurong());
+    document.write("<br>");
+    document.write("Diện tích hình chữ nhật: " + chuNhat1.tinhDientich());
+    document.write("<br>");
+    document.write("Chu vi hình chữ nhật: " + chuNhat1.tinhChuvi());
 </script>
 </body>
 </html>

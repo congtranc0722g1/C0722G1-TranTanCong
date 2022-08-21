@@ -7,23 +7,26 @@
 <body>
 <script>
     class ChuyenDoiNhietDo {
-        constructor(DoC) {
-            this.DoC = DoC;
+        constructor(doC) {
+            this.doC = doC;
         }
-        TinhDoF(DoF){
-            DoF = 9/5 * this.DoC + 32;
+        doC2(){
+            return this.doC;
+        }
+        tinhDoF(DoF){
+            DoF = 9/5 * this.doC + 32;
             return DoF;
         }
-        TinhDoK(DoK){
-            DoK = this.DoC + 273.15;
+        tinhDoK(DoK){
+            DoK = this.doC + 273.15;
             return DoK;
         }
     }
     let nhapNhietdo =+prompt("nhập vào nhiệt độ");
-    let DoC = new ChuyenDoiNhietDo(nhapNhietdo);
-    document.write(nhapNhietdo + "℃ = " + DoC.TinhDoF() + "℉");
+    let doC1 = new ChuyenDoiNhietDo(nhapNhietdo);
+    document.write(doC1.doC2() + "℃ = " + doC1.tinhDoF() + "℉");
     document.write("<br>");
-    document.write(nhapNhietdo + "℃ = " + DoC.TinhDoK() + "K");
+    document.write(doC1.doC2() + "℃ = " + doC1.tinhDoK() + "°K");
 </script>
 </body>
 </html>
