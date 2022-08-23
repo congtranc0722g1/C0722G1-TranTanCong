@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class QuaTao {
+        constructor(khoiLuongtao) {
+            this.khoiLuong = khoiLuongtao;
+        }
+        khoiLuongtao(){
+            return this.khoiLuong;
+        }
+        khoiLuongconlai(){
+            if (this.khoiLuong <= 0){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        giamKhoiluong(){
+            if (this.khoiLuongconlai()){
+                alert("táo đã hết rồi");
+            }else {
+                this.khoiLuong--
+            }
+        }
+    }
+    class Nguoi {
+        constructor(ten,gioiTinh,canNang) {
+            this.ten = ten;
+            this.gioiTinh = gioiTinh;
+            this.canNang = canNang;
+            this.thoai = "";
+        }
+        canNangdoduoc(){
+            return this.canNang;
+        }
+        noi(loiThoai){
+            console.log(loiThoai);
+        }
+        anTao(quaTao){
+            if(quaTao.khoiLuongtao() > 0){
+                quaTao.giamKhoiluong();
+                this.canNang++
+            }else {
+                alert("Táo đã hết rồi");
+            }
+        }
+    }
+    let adam = new Nguoi("adam","nam",60);
+    let eva = new Nguoi("eva","nu",45);
+    let tao1 = new QuaTao(10);
+    adam.noi("Hi eva");
+    eva.noi("Hi adam");
+    while (tao1.khoiLuongconlai() !== true){
+        document.write("Adam ăn táo" + "<br>");
+        adam.anTao(tao1);
+
+        document.write("Quả táo còn: " + " ");
+        document.write(tao1.khoiLuongtao() + " đơn vị" + "<br>");
+        document.write( "Cân nặng của Adam là: " + adam.canNangdoduoc() + " đơn vị" + "<br>");
+
+        document.write("<br>")
+
+        document.write("Eva ăn táo" + "<br>");
+        eva.anTao(tao1);
+
+        document.write("Quả táo còn: " + " ");
+        document.write(tao1.khoiLuongtao() + " đơn vị" + "<br>");
+        document.write( "Cân nặng là: " + eva.canNangdoduoc() + " đơn vị" + "<br>");
+
+    }
+</script>
+</body>
+</html>

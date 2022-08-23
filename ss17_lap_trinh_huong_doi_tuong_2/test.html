@@ -8,52 +8,120 @@
 <p id="result"></p>
 <script>
 
-    class ElectricLamp{
-        constructor(status) {
-            this.status = status;
+    class Apple{
+        constructor(weight) {
+            this.weight = weight;
         }
-        getStatus(){
-            return this.status;
-        }
-    }
-
-    class SwitchButton{
-        constructor(lamp, status) {
-            this.status = status;
-            this.lamp = lamp;
-        }
-        getLamp(){
-            return this.lamp;
+        getWeight() {
+            return this.weight;//2
         }
 
-        setLamp(lamp){
-            this.lamp = lamp;
+        setWeight(weight) {
+            this.weight = weight;
+        };
+
+        isEmpty() {
+            if(this.weight <= 0){
+                return true;
+            }else {
+                return false;
+            }
         }
 
-        connectToLamp(Electriclamp){
-            return this.lamp = Electriclamp;
-        }
-
-        switchOff(){
-            this.lamp.status = false;
-            return this.status = false;
-        }
-
-        switchOn(){
-            this.lamp.status = true;
-            return this.status = true;
+        decreaseApple(){
+            if(this.isEmpty()){
+                alert("Táo đã hết rồi");
+            }else {
+                this.weight--;
+            }
         }
     }
 
+    class Human{
+        constructor(name,gender,weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+        getName(){
+            return this.name;
+        }
+        setName(name){
+            this.name = name;
+        }
+        getWeight(){
+            return this.weight;
+        }
 
-    let electricLamp_1 = new ElectricLamp(false);
+        isMale(){
+            if(this.gender == 1){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        getGender(){
+            if(this.isMale()){
+                return "Male";
+            }else {
+                return "Female";
+            }
+        }
 
-    let switchButton_1 = new SwitchButton(electricLamp_1,false); // kết nối giữa  công tắc 1 và đèn 1
+        setWeight(weight){
+            this.weight = weight;
+        }
 
-    console.log(switchButton_1.switchOn());
-    console.log(electricLamp_1.getStatus());
-    console.log(switchButton_1.switchOff());
-    console.log(electricLamp_1.getStatus());
+        say(string) {
+            console.log(string);
+        }
+
+        checkApple(apple){
+            return apple.isEmpty();
+        }
+
+        eat(apple){
+            if(apple.getWeight() > 0){
+                apple.decreaseApple(); //1
+                this.weight++; //66
+            }else {
+                alert("Táo đã hết");
+            }
+        }
+
+        getInfo(human){
+            alert(human.name + " " +human.weight + " " +human.getGender());
+        }
+    }
+
+
+    let adam = new Human("adam", 1, 65);
+    let eva = new Human("eva", 2, 55);
+    let apple_1 = new Apple(10);
+
+
+    // adam.checkApple(apple_1)
+    adam.say("I am Adam" + "<br>");
+    eva.say("I am Eva" + "<br>");
+
+
+    while (apple_1.isEmpty() !== true) {
+        document.write("Adam ăn táo" + "<br>");
+        adam.eat(apple_1);
+
+        document.write("Quả táo còn: " + "<br>");
+        document.write(apple_1.getWeight() + " đơn vị" + "<br>");
+        document.write( "Cân nặng của Adm là: " + adam.getWeight() + " đơn vị" + "<br>");
+
+        document.write("<br>")
+
+        document.write("Eva ăn táo" + "<br>");
+        eva.eat(apple_1);
+
+        document.write("Quả táo còn: " + "<br>");
+        document.write(apple_1.getWeight() + " đơn vị" + "<br>");
+        document.write( "Cân nặng là: " + eva.getWeight() + " đơn vị" + "<br>");
+    }
 
 </script>
 </body>
