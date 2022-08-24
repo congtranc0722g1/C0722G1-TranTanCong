@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    luongThang = +prompt("Nhập vào lương của bạn");
+    if (luongThang >= 15000000){
+        thueThunhap = luongThang / 100 * 20;
+        luongRong = luongThang - thueThunhap;
+    }
+    else if (luongThang >= 7000000 ){
+        thueThunhap = luongThang / 100 * 10;
+        luongRong = luongThang -thueThunhap;
+    }else {
+        thueThunhap = luongThang / 100 * 5;
+        luongRong = luongThang -thueThunhap;
+    }
+    alert("Bạn phải trả: " + thueThunhap + " .Và nhận đươc: " + luongRong);
+</script>
+</body>
+</html>
