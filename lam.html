@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 1,2,3,4,1,2
+    let soPhantu = +prompt("nhập vào số phần tử");
+    let arr = new Array(soPhantu);
+
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] =  +prompt("Nhập và phân tử" + i);
+    }
+    alert(arr);
+    for (let i = 0; i < arr.length; i=i+2) {
+        if (arr[i] >= arr [i + 1]){
+            count++;
+        }
+    }
+    if(count !== 0){
+        alert("no");
+    } else {
+        alert("ok");
+    }
+</script>
+</body>
+</html>

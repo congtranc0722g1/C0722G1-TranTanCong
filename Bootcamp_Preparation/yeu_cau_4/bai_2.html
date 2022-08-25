@@ -10,7 +10,19 @@
     arr = [];
     arr = kyTu.split("");
     c = [];
-    alert(c);
+    for (let i = 0; i < arr.length; i++) {
+        count = 0;
+        for (let j = 0; j < arr.length; j++) {
+            if(arr[i] == arr[j]){
+                count++
+            }
+        }
+        if (count == 1){
+            c.push(arr[i]);
+        }
+
+    }
+    alert("Có " + c.length +" ký tự khác nhau là: " + c);
 </script>
 </body>
 </html>

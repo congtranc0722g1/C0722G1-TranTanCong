@@ -8,11 +8,12 @@
 <script>
 let chieuCao = +prompt("Nhập vào giá trị");
 for (let i = 1; i <= chieuCao; i++) {
-    for (let j = 1; j <= chieuCao - 1; j++) {
-        if(i == chieuCao || j == 1 || j == i){
+    for (let j = 1; j <= chieuCao; j++) {
+        if(j == 1 || j == i || i == chieuCao ){
             document.write("*");
+        }else {
+            document.write("&nbsp&nbsp");
         }
-        document.write("&nbsp&nbsp");
 
     }
     document.write("<br>");
