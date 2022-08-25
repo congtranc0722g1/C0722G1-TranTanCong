@@ -6,9 +6,9 @@
 </head>
 <body>
 <script>
-    let n = +prompt("Nhập vào giá trị");
-    for (let i = 1; i <= n; i++) {
-        for (let j = 1; j <= n - i ; j++) {
+    let chieuCao = +prompt("Nhập vào giá trị");
+    for (let i = 1; i <= chieuCao; i++) {
+        for (let j = 1; j <= chieuCao - i ; j++) {
             document.write("&nbsp&nbsp");
 
         }
@@ -16,7 +16,7 @@
             document.write("*");
 
         }
-        for (let j = 1; j <= n - i ; j++) {
+        for (let j = 1; j <= chieuCao - i ; j++) {
             document.write("&nbsp&nbsp");
 
         }

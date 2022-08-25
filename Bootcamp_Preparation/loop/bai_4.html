@@ -6,6 +6,24 @@
     <script src="main.js"></script>
 </head>
 <body>
+<script>
+    let daySo1 = [1,2,3,4,5,6,7,8,9,0];
+    let daySo2 = ["một","hai","ba","bốn","năm","sáu","bảy","tám","chín","không"];
+    let ketQua = [];
+    let daySo = prompt("Nhập vào dãy số");
+    let arr = [];
+    let  index_a = 0;
+    arr = daySo.split("")
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < daySo1.length; j++) {
+            if (arr[i] == daySo1[j]){
+                index_a = j;
+            }
+        }
+        ketQua.push(daySo2[index_a]);
 
+    }
+    document.write(ketQua.join(" "));
+</script>
 </body>
 </html>
