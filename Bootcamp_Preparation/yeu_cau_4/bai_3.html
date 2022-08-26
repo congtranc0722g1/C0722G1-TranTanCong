@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let str = ["a","a","b","c","c"];
+    let str1 = ["a","d","c","a","a"];
+    let c = [];
+    for (let i = 0; i < str.length; i++) {
+        for (let j = 0; j < str1.length; j++) {
+            if (str[i] == str1[j]) {
+                c.push(str[i]);
+                str.splice(i, 1);
+                str1.splice(j, 1);
+            }
+        }
+    }
+    alert(c);
+</script>
 </body>
 </html>

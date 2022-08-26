@@ -9,20 +9,16 @@
     let kyTu = prompt("Nhập vào một chuỗi ký tự:");
     arr = [];
     arr = kyTu.split("");
-    c = [];
+    let arr1 = [];
     for (let i = 0; i < arr.length; i++) {
-        count = 0;
-        for (let j = 0; j < arr.length; j++) {
-            if(arr[i] == arr[j]){
-                count++
-            }
+        for (let j = 0; j <= arr1.length; j++) {
+          if (arr[i] != arr1[j]) {
+              arr1.push(arr[i]);
+          }
         }
-        if (count == 1){
-            c.push(arr[i]);
-        }
-
     }
-    alert("Có " + c.length +" ký tự khác nhau là: " + c);
+    alert(arr1)
+
 </script>
 </body>
 </html>
