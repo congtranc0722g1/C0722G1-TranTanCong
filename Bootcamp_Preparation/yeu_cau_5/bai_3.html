@@ -15,32 +15,31 @@
             arr[i][j] = +prompt("Nhập các phân tử" + i + j);
         }
     }
-    function timSonhonhat(arr){
-        let nhoNhat = [0][0];
-        for (let i = 1; i < arr.length; i++) {
-            for (let j = 1; j < arr[i].length; j++) {
-                if (nhoNhat >= arr[i][j]){
-                    nhoNhat = arr[i][j];
-                    return nhoNhat;
+    function timGiaTriLonNhat(arr1) {
+        let lonNhat = 0;
+        for (let i = 0; i < arr1.length; i++) {
+            for (let j = 0; j < arr1[i].length; j++) {
+                if(arr1[i][j]>=lonNhat){
+                    lonNhat=arr1[i][j];
                 }
             }
-
         }
+        return lonNhat;
     }
-    function timSolonnhat(arr){
-        let lonNhat = [0][0];
-        for (let i = 1; i < arr.length; i++) {
-            for (let j = 1; j < arr[i].length; j++) {
-                if (lonNhat <= arr[i][j]){
-                    lonNhat = arr[i][j];
-                    return lonNhat;
+    function timGiaTriNhoNhat(arr2) {
+        let nhoNhat= timGiaTriLonNhat(arr);
+        for (let i = 0; i < arr2.length; i++) {
+            for (let j = 0; j < arr2[i].length; j++) {
+                if(arr2[i][j]<=nhoNhat){
+                    nhoNhat=arr2[i][j];
                 }
             }
-
         }
+        return nhoNhat;
     }
-    alert(timSonhonhat(arr));
-    alert(timSolonnhat(arr));
+    document.write("Số lớn nhất là: " + timGiaTriLonNhat(arr));
+    document.write("<br>");
+    document.write("Số bé nhất là: " + timGiaTriNhoNhat(arr));
 </script>
 </body>
 </html>

@@ -15,19 +15,16 @@
                 arr[i][j] = +prompt("Nhập các phân tử" + i + j);
             }
         }
+        let count = 0;
         for (let i = 0; i < arr.length; i++) {
             for (let j = 0; j < arr[i].length; j++) {
-                count = 0;
-                if (arr[i][j] % j === 0) {
-                    count++
-                    alert(count);
-                }
-                if (count == 2) {
-                    c.push(arr[i][j]);
+                if ((mang[i][j]) === true) {
+                    document.write(mang[i][j] + "<br>");
+                    count++;
                 }
             }
         }
-        return c;
+        document.write("Các số nguyên tố là : " + count + "<br>")
     }
     let m1 = +prompt("Nhập số thứ nhất");
     let n1 = +prompt("Nhập số thứ hai");
