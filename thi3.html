@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soPhantu =+prompt("Nhập Số phần tử");
+    let phanTu = new Array(soPhantu);
+    for (let i = 0; i< phanTu.length; i++) {
+        phanTu[i] = prompt("Nhập phân tử thứ:" + i);
+    }
+    let n =+prompt("Nhập vào một số nguyên bất kỳ");
+    c = [];
+    function soLuongphantuchiahetchon(arr1,n1) {
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] % n == 0){
+                if (!c.includes(arr1[i])){
+                    c.push(arr1[i]);
+                }
+            }
+        }
+        return c.length;
+    }
+    alert("có: " + soLuongphantuchiahetchon(phanTu,n));
+</script>
+</body>
+</html>

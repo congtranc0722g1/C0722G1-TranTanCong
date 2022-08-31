@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soPhantu =+prompt("Nhập Số phần tử");
+    let phanTu = new Array(soPhantu);
+    for (let i = 0; i< phanTu.length; i++) {
+        phanTu[i] = prompt("Nhập phân tử thứ:" + i);
+    }
+    function viTrilonnhatbenhat(arr) {
+        c = [];
+        let lonNhat = arr[0];
+        let nhoNhat = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > lonNhat) {
+                lonNhat = arr[i];
+            }
+            if (arr[i] < nhoNhat) {
+                nhoNhat = arr[i];
+            }
+        }
+        for (let i = 0; i < arr.length; i++) {
+
+        }
+    }
+    alert(viTrilonnhatbenhat(phanTu))
+</script>
+</body>
+</html>

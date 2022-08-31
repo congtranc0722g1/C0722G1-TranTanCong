@@ -6,8 +6,7 @@
 </head>
 <body>
 <script>
-    function tinhTongcacsochan(m,n) {
-        let arr = [];
+    function tinhTongcacsochan(arr) {
         let tong = 0;
         for (let i = 0; i < m; i++) {
             arr[i] = [];
@@ -25,9 +24,16 @@
         }
         return tong;
     }
-    let m1 = +prompt("Nhập số thứ nhất");
-    let n1 = +prompt("Nhập số thứ hai");
-    alert(tinhTongcacsochan(m1,n1));
+    let m = +prompt("Nhập số hang");
+    let n = +prompt("Nhập số  cot");
+    for (let i = 0; i < m; i++) {
+        arr[i] = [];
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = +prompt("Nhập các phân tử" + i + j)
+        }
+
+    }
+    alert(tinhTongcacsochan(arr));
 </script>
 </body>
 </html>

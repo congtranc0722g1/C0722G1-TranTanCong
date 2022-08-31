@@ -6,29 +6,38 @@
 </head>
 <body>
 <script>
-    function demSonguyento(m,n) {
-        let arr = [];
-        let c = [];
-        for (let i = 0; i < m; i++) {
-            arr[i] = [];
-            for (let j = 0; j < n; j++) {
-                arr[i][j] = +prompt("Nhập các phân tử" + i + j);
-            }
-        }
-        let count = 0;
+
+    function demSonguyento(arr) {
         for (let i = 0; i < arr.length; i++) {
             for (let j = 0; j < arr[i].length; j++) {
-                if ((mang[i][j]) === true) {
-                    document.write(mang[i][j] + "<br>");
-                    count++;
+                if ((isPrime(arr[i][j])==true)) {
+                    document.write(arr[i][j] + "<br>");
                 }
             }
         }
-        document.write("Các số nguyên tố là : " + count + "<br>")
     }
-    let m1 = +prompt("Nhập số thứ nhất");
-    let n1 = +prompt("Nhập số thứ hai");
-    alert(demSonguyento(m1,n1));
+    function isPrime(n){
+        if (n<2){
+            return false;
+        }else {
+            for (let i = 2; i <n ; i++) {
+                if (n%i==0){
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+    let m = +prompt("Nhập số hang");
+    let n = +prompt("Nhập số cot");
+    let arr1 = [];
+    for (let i = 0; i < m; i++) {
+        arr1[i] = [];
+        for (let j = 0; j < n; j++) {
+            arr1[i][j] = +prompt("Nhập các phân tử" + i + j);
+        }
+    }
+    (demSonguyento(arr1));
 </script>
 </body>
 </html>

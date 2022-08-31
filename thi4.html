@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Danh sách bệnh nhân</h1>
+<input type="text" id="stt" placeholder="nhập STT">;
+<input type="text" id="ten" placeholder="nhập tên">;
+<input type="text" id="tuoi" placeholder="nhập tuổi">;
+<input type="text" id="diachi" placeholder="Nhập địa chỉ">;
+<input type="text" id="sdt" placeholder="Nhập số điện thoại">;
+<input type="button" onclick="addNewStudent()" value="Thêm bệnh nhân mới">;
+<p id="display"></p>;
+<script>
+    class BenhNhan {
+        constructor(stt, ten, tuoi, diachi, sdt) {
+            this.stt = stt;
+            this.ten = ten;
+            this.tuoi = tuoi;
+            this.diachi = diachi;
+            this.sdt = sdt;
+        }
+
+        setStt(stt) {
+            this.stt = stt;
+        }
+
+        setTen(ten) {
+            this.ten = ten;
+        }
+
+        setTuoi(tuoi) {
+            this.tuoi = tuoi;
+        }
+
+        setDiachi(diachi) {
+            this.diachi = diachi;
+        }
+
+        setSdt(sdt) {
+            this.sdt = sdt;
+        }
+
+        getStt() {
+            return this.stt;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        getTuoi() {
+            return this.tuoi;
+        }
+
+        getDiachi(diachi) {
+            return this.diachi;
+        }
+
+        getSdt(sdt) {
+            return this.sdt;
+        }
+    }
+    let benhnhan1 = new BenhNhan(1, "chanh", 37);
+    let benhNhan2 = new BenhNhan(2, "chanh2", 372);
+    let benhNhan3 = new BenhNhan(3, "chanh3", 374);
+    let danhSachbenhnhan = [benhnhan1,benhNhan2,benhNhan3];
+    display(danhSachbenhnhan);
+    function display(danhSach) {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Tên</th>\n' +
+            '        <th>tuổi</th>\n' +
+            '        <th>Địa chỉ</th>\n' +
+            '        <th>Xóa</th>\n' +
+            '        <th>Chỉnh Sửa</th>\n' +
+            '    </tr>';
+    }
+
+</script>
+</body>
+</html>

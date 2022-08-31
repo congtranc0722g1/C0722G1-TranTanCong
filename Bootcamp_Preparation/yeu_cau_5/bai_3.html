@@ -16,30 +16,21 @@
         }
     }
     function timGiaTriLonNhat(arr1) {
-        let lonNhat = 0;
+        let lonNhat = arr1[0][0];
+        let nhoNhat = arr1[0][0];
         for (let i = 0; i < arr1.length; i++) {
             for (let j = 0; j < arr1[i].length; j++) {
-                if(arr1[i][j]>=lonNhat){
+                if(arr1[i][j]>lonNhat){
                     lonNhat=arr1[i][j];
                 }
-            }
-        }
-        return lonNhat;
-    }
-    function timGiaTriNhoNhat(arr2) {
-        let nhoNhat= timGiaTriLonNhat(arr);
-        for (let i = 0; i < arr2.length; i++) {
-            for (let j = 0; j < arr2[i].length; j++) {
-                if(arr2[i][j]<=nhoNhat){
-                    nhoNhat=arr2[i][j];
+                if(arr1[i][j]<lonNhat){
+                    nhoNhat=arr1[i][j];
                 }
             }
         }
-        return nhoNhat;
+        alert("nho nhat "+nhoNhat+"lon nhat "+lonNhat);
     }
-    document.write("Số lớn nhất là: " + timGiaTriLonNhat(arr));
-    document.write("<br>");
-    document.write("Số bé nhất là: " + timGiaTriNhoNhat(arr));
+    timGiaTriLonNhat(arr)
 </script>
 </body>
 </html>
